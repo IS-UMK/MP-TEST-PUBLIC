@@ -1,0 +1,16 @@
+name: Hello Pull Requests
+on: [pull_request]
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
+      - name: Upload output file
+        uses: actions/upload-artifact@v2
+        with:
+          name: MP-TEST-PUBLIC-LOG-FILE
+          path: output.log
