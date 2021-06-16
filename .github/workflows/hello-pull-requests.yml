@@ -15,4 +15,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: MP-TEST-PUBLIC-LOG-FILE
-          path: output.log
+          path: ./.github/output.log
