@@ -21,8 +21,4 @@ jobs:
         with:
           name: MP-TEST-PUBLIC-LOG-FILE
           path: ./.github/output.log
-      - shell: bash
-        run: |
-          cat ./.github/output.log
-        run: |
-          pwd
+
