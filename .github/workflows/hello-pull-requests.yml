@@ -11,8 +11,17 @@ jobs:
       - shell: bash
         run: |
           echo ${{ runner.os }} > ./.github/output.log
+      - name: inside of file
+        run: |
+          cat ./.github/output.log
+        run: |
+          pwd
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
           name: MP-TEST-PUBLIC-LOG-FILE
           path: ./.github/output.log
+        run: |
+          cat ./.github/output.log
+        run: |
+          pwd
