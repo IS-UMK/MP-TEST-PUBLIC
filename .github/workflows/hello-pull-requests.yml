@@ -1,5 +1,7 @@
 name: Hello Pull Requests
-on: [pull_request]
+on:
+  pull_request:
+    types: [opened]
 jobs:
   example-job:
     runs-on: ubuntu-latest
